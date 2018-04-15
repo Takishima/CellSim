@@ -1,0 +1,49 @@
+********************************************************************************
+*		Part of the documentation for Cellsim    		       *
+*			       	  by					       *
+*		             Nguyen Damien      			       *
+*									       *
+*		      September 2012 - June 2013			       * 
+********************************************************************************
+
+/*! \page requirements Requirements
+
+\section Compiler
+
+This project relies on the new C++11 standards. As such, older compilers cannot
+ be used since they don't implement the new useful features of the C++ language.
+
+More precisely, the code has been developped to compile with :
+
+\li GCC-4.7.x
+\li clang-3.1
+
+\note Newer versions of the above compilers should work properly too.
+
+\section Boost
+
+This program heavily depends on the Boost libraries (v1.48 or later). Since they
+ are mainly a set of headers, the main requirement is for the compiler to find
+ them in the system header folder (usually \c /usr/include, \c /usr/local/include
+ or something similar). 
+
+\note You can easily add the path to the headers by using the compiler options
+      \c -isystem/path/to/headers
+
+More precisely, it explicitly uses the followings :
+     - Boost.Accumulators
+     - Boost.Program_option
+     - Boost.Units
+
+Note that these might have some other dependencies (like Boost.MPL)
+
+The other requirements are (depending on whether you are using static or dynamic libraries) :
+    - \c libboost_program_options.a  (or -lboost_program_options)
+
+Those static libraries can easily be built using the following command from the root directory:\n
+\c make \c boostlib \n
+
+\note You will need to have all the headers of the Boost libraries somewhere inside 
+your compiler's include path to finish the build, as they both depend on other Boost
+ libraries.
+*/

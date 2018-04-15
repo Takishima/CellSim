@@ -1,0 +1,41 @@
+********************************************************************************
+*		Part of the documentation for Cellsim    		       *
+*			       	  by					       *
+*		             Nguyen Damien      			       *
+*									       *
+*		      September 2012 - June 2013			       * 
+********************************************************************************
+
+/*! \page macro Preprocessor macros
+
+Here is a list of the macros used across the code.
+
+\section cell_macro Cell macro
+
+\ref GET_METHOD_PTR_C\n
+\ref GET_METHOD_PTR_I\n
+\ref GET_METHOD_PTR_S\n
+\ref GET_METHOD_PTR_V\n
+\ref GET_METHOD_PTR_W\n
+
+Macros defined to clear the code of some necessary but verbose syntax to de-
+ambiguify some function calls.
+
+\section constants_macro Constants macro
+
+\ref STATIC_CONSTANT
+
+Marco used to define static constants in headers in an ODR-safe way.
+
+\section units_macro Units macros
+
+\ref MAKE_LITERAL_OPERATOR
+
+This macros simplifies the definition of a user-defined literal operator for
+use in the code.
+
+\ref MAKE_LITERAL_OPERATOR_BOOST
+
+Same purpose as MAKE_LITERAL_OPERATOR but for Boost.Units types
+
+*/

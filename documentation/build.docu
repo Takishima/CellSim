@@ -1,0 +1,125 @@
+********************************************************************************
+*		Part of the documentation for Cellsim    		       *
+*			       	  by					       *
+*		             Nguyen Damien      			       *
+*									       *
+*		      September 2012 - June 2013			       * 
+********************************************************************************
+
+/*! \page build Building
+
+\section quick_start Quick start
+
+There are now two ways of building \e cellsim. The preferred way being via CMake.
+
+\note The main program as well as the test framework require some static/dynamics 
+libraries from Boost.
+      See \ref requirements for more information.
+
+\subsection cmake_build Build using CMake
+
+This is very straight forward :
+     \li \c mkdir build
+     \li \c cd build && cmake ..
+     \li \c make -j4
+     \li \c make doc (to build this documentation)
+
+\note Typing \c make \c help will print a help message with available targets
+
+\subsection makefile_build Old build system
+
+The old build system should still work and is as simple as typing:
+    \li \c make main \n
+    \li \c make doc (to build this documentation)
+This will build the main program \e cellsim.x.
+
+\note Typing \c make will print a help message with available targets
+\note The makefile support parallel jobs to speedup compilation (see -j option for \c make)
+
+\section conf_description Project configuration
+
+Here's a description of \c \#defines directives that are used internally by \c Cellsim :
+
+ \c \b WITH_RANGE_CHECK \n
+
+This directive turns on dynamic range checking throughout the code. Can be omited to improve performance. 
+
+ \c \b MULTI_THREAD \n
+
+This directive enables multi-threading throughout the code.
+
+ \c \b HALIDI_2009 or \c \b HALIDI_2012 \n
+
+These directives choose between the equations of motions from 2009 or 2012 (only for Halidi part of the code)
+
+ \c \b PLC_ACTIVATION or \c \b ELECTRIC_ACTIVATION \n
+
+These directives choose between a PLC activation (ie IP3 activation) or an electric potential activation for the cells (only for Halidi part of the code and not for any bifurcation diagram mode)
+
+ \c \b SIMPLE_PROGRESS_BAR \n
+
+Prefer a simple progress bar ? Can be useful if you plan on redirecting the output to a file.
+
+ \c \b NO_UNITS \n
+
+This directive disables the use of units for dimensional analysis (not fully tested but should work)
+
+\note Edit CMakeLists.txt or Makefile in the project root directory to enable/disable
+      these defines.
+
+\section makefile Makefile commands (old build system only)
+
+Here's an exhaustive list of all the targets available in the Makefile.
+
+\subsection ptarget Program targets
+
+\li \c all \n
+    Show usage message with all possible targets
+
+\li \c main[_debug] \n
+    Build main program
+
+\subsection btargets Building targets
+
+\li \c boostlib \n
+    Build Boost.Program_options static libraries locally
+
+\li \c boostlib_force \n
+    Identical as above, but always force a compilation
+
+\li \c core \n
+    Compile all files inside the \c core subdirectory.
+
+\li \c doc \n
+    Generate documentation using Doxygen.
+
+\li \c file \n
+    Generate documentation using Doxygen.
+
+\li \c integrators \n
+    Compile all files inside the \c integrators subdirectory.
+
+\li \c model \n
+    Compile all files inside the \c model subdirectory.
+
+\li \c programs \n
+    Compile all files inside the \c programs subdirectory.
+
+\subsection ctargets Cleaning targets
+
+\li \c clean \n
+    Clean all build directories (remove *.o files)
+
+\li \c clean_deps \n
+    Remove file dependence file (.depends)
+
+\li \c clean_doc \n
+    Clean all documentation generated with Doxygen
+
+\li \c mrproper \n
+    Thouroughly clean build directories. Removes:
+    		- all object files (*.o)
+		- all executables
+		- all documentation generated
+
+*/

@@ -1,0 +1,11 @@
+# Build instructions
+
+## Using CMake
+    mkdir -p build
+    cd build
+    cmake .. && make -j4
+
+## Using the old build system
+   make [target name]
+   (make will print help message)
+

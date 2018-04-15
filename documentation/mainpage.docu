@@ -1,0 +1,39 @@
+********************************************************************************
+*		Part of the documentation for Cellsim    		       *
+*			       	  by					       *
+*		             Nguyen Damien      			       *
+*									       *
+*		      September 2012 - June 2013			       * 
+********************************************************************************
+
+/*! \mainpage
+
+\section Introduction
+Welcome to the documentation of \e cellsim. It has been developped as a two semester 
+project by Nguyen Damien (EPFL Switzerland) for the course \e Computational
+\e Simulations \e of \e Physical \e Systems, EPFL Master of Physics.
+
+This project was directed by Prof. Meister Jean-Jacques and supervised by
+PhD assistant Quijano Jairo. Its goal is to simulate calcium waves in 
+Smooth Muscle Cells (SMCs) by using two models.
+
+The first one is based on work by Dr. Halidi and master student Salathe in 2009,
+which takes diffusive effects of calcium and IP3 in the cells.
+
+The second is directly based on the model proposed by Dr. Koenigsberger et al. in 
+2004, further improved in 2010.
+
+\section related_pages Related pages
+You may want to have a look here for more information on specific topics:
+   \li\ref build
+   \li\ref macro
+   \li\ref requirements
+
+\section licensing Licensing
+
+As this code contains work from others, it is right that they get the credits
+they deserve: \ref license
+
+\author Nguyen Damien (damien.nguyen@epfl.ch)
+\date September 2012 - June 2013
+*/
